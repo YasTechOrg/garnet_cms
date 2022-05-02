@@ -1,0 +1,56 @@
+@import ./fonts
+
+#skills
+  padding: 10px
+
+  > h1
+    color: white
+    text-shadow: 0 8px 32px rgba( 31, 38, 135, 0.37)
+    font-size: 40px
+    font-family: Tomorrow, sans-serif
+    @media screen and (max-width: 480px)
+      font-size: 30px
+      margin-bottom: 0
+
+  > div
+    width: 95%
+    @media screen and (max-width: 480px)
+      width: 100%
+      margin-top: 15px!important
+
+    > div
+      width: fit-content
+
+      > div
+        border-radius: 10px
+        padding: 10px 15px
+        cursor: pointer
+        transition: 0.2s
+
+        @media screen and (max-width: 530px)
+          > h5
+            font-size: 14px
+
+        @media screen and (max-width: 480px)
+          padding: 8px
+
+          > h5
+            font-size: 10px
+
+        @media screen and (max-width: 400px)
+          padding: 2px
+
+          > h5
+            font-size: 10px
+
+        > h5
+          color: white
+          font-family: Tomorrow, sans-serif
+          margin-bottom: 0
+          transition: 0.2s
+          font-size: 18px
+
+      > div:hover
+        > h5
+          color: #d2ff66
+          text-shadow: 0 0 30px rgba(210, 255, 102, 0.37)
