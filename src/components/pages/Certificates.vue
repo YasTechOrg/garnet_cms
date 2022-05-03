@@ -7,23 +7,21 @@ document.title = "My Certificates"
 const certificates = ref([
   {
     title: "CS50x",
+    img: "https://hossaracom.s3.ir-thr-at1.arvanstorage.com/cs50_cert.png",
     school: "Harvard University",
     time: ["July 2021", "No expiration"]
   },
   {
-    title: "CS50x",
-    school: "Harvard University",
-    time: ["July 2021", "No expiration"]
+    title: "Mentoring Certificates",
+    img: "https://hossaracom.s3.ir-thr-at1.arvanstorage.com/gereh_cert.jpeg",
+    school: "Gereh Circles",
+    time: ["NOV 2021", "No expiration"]
   },
   {
-    title: "CS50x",
-    school: "Harvard University",
-    time: ["July 2021", "No expiration"]
-  },
-  {
-    title: "CS50x",
-    school: "Harvard University",
-    time: ["July 2021", "No expiration"]
+    title: "Participation Certificates",
+    img: "https://hossaracom.s3.ir-thr-at1.arvanstorage.com/kayam_cert.jpg",
+    school: "Khayyam International Invention and Innovation Festival",
+    time: ["MAY 2021", "No expiration"]
   },
 ])
 
@@ -37,7 +35,7 @@ const certificates = ref([
       <div class="row m-0">
         <div class="cert col-sm-6" v-for="certificate in certificates" :key="certificate">
           <div class="d-flex w-100 flex-column">
-            <img src="../../assets/img/cs50.png" alt="CS50">
+            <img :src="certificate.img" alt="CS50">
             <h2>{{ certificate.title }}</h2>
             <h4>{{ certificate.school }}</h4>
             <p>{{ certificate.time[0] }} - {{ certificate.time[1] }}</p>

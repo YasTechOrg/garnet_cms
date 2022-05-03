@@ -13,6 +13,7 @@
   border-radius: 7px!important
 
 #experiences
+  padding-top: 20px
 
   > h1
     color: white
@@ -24,8 +25,12 @@
     max-height: 450px
     overflow-y: auto
     padding: 10px
+    @media screen and (max-width: 400px)
+      padding: 0
 
     > div:hover
+      @media screen and (max-width: 400px)
+        box-shadow: none!important
       box-shadow: 0 0 10px 0 rgba(210, 255, 102, 0.37)
 
     > div
