@@ -3,7 +3,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && zip -r .output.zip .output",
+    "zip": "zip -r .output.zip .output",
     "preview": "nuxt preview"
   },
   "dependencies": {
