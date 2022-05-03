@@ -1,8 +1,9 @@
 <script setup lang="ts">
 
-import {ref} from "vue"
 
-document.title = "My Certificates"
+/*document.title = "My Certificates"*/
+
+import {ref} from "#imports"
 
 const certificates = ref([
   {
