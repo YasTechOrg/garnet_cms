@@ -1,25 +1,21 @@
 {
-  "name": "garnet_cms",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate && zip -r .output.zip .output",
+    "zip": "zip -r .output.zip .output",
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
     "font-awesome": "^4.7.0",
     "particles.vue3": "^2.0.6",
-    "tsparticles": "^2.0.6",
-    "vue": "^3.2.25"
+    "tsparticles": "^2.0.6"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "sass": "^1.51.0",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.5",
-    "vue-tsc": "^0.34.7"
+    "nuxt": "3.0.0-rc.1",
+    "sass": "^1.51.0"
   }
 }

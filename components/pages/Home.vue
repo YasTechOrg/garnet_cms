@@ -1,7 +1,11 @@
 <script setup lang="ts">
 
-document.title = "Hossein Araghi"
 
+import {definePageMeta} from "#imports"
+
+definePageMeta({
+  title: 'Hossein Araghi'
+})
 </script>
 
 <template>

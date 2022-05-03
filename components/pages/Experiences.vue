@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
-import {ref} from "vue"
-
-document.title = "My Experiences"
+import {ref} from "#imports"
+/*
+document.title = "My Experiences"*/
 
 const experiences = ref([
   {

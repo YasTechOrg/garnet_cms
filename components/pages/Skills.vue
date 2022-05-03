@@ -2,7 +2,7 @@
 
 import {ref} from "vue"
 
-document.title = "My Skills"
+/*document.title = "My Skills"*/
 
 const skills = ref([
     "Spring Boot, Kotlin",

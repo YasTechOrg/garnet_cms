@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import {defineAsyncComponent, Ref, ref} from "vue"
-import { loadFull } from "tsparticles"
-import MenuItem from "./components/MenuItem.vue";
+import {loadFull} from "tsparticles"
+import {defineAsyncComponent, ref, resolveComponent} from "#imports"
+import {Ref} from "@vue/reactivity"
+import {MenuItem} from "#components"
 
 const particlesInit = ref(async (engine: any) => {
-  await loadFull(engine);
+  await loadFull(engine)
 })
 
 const pages = ref([
@@ -16,16 +17,16 @@ const pages = ref([
 ])
 
 const views: Ref  = ref([
-  defineAsyncComponent(() => import("./components/pages/Skills.vue")),
-  defineAsyncComponent(() => import("./components/pages/Experiences.vue")),
-  defineAsyncComponent(() => import("./components/pages/Home.vue")),
-  defineAsyncComponent(() => import("./components/pages/Certificates.vue")),
-  defineAsyncComponent(() => import("./components/pages/Contact.vue")),
+  resolveComponent("pages/Skills"),
+  resolveComponent("pages/Experiences"),
+  resolveComponent("pages/Home"),
+  resolveComponent("pages/Certificates"),
+  resolveComponent("pages/Contact"),
 ])
 
 const active_page = ref(2)
 
-const menuItem = defineAsyncComponent(() => import("./components/MenuItem.vue"))
+const menuItem = resolveComponent("MenuItem")
 </script>
 
 <template>
@@ -81,6 +82,7 @@ const menuItem = defineAsyncComponent(() => import("./components/MenuItem.vue"))
     </div>
   </div>
 </template>
+
 <style lang="sass">
 #particles
   position: fixed
@@ -102,4 +104,4 @@ const menuItem = defineAsyncComponent(() => import("./components/MenuItem.vue"))
   opacity: 0
   transform: translateY(-30px)
 </style>
-<style lang="sass" src="./assets/sass/style.sass"></style>
+<style lang="sass" src="../assets/sass/style.sass"></style>
