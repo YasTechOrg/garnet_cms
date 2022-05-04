@@ -8,10 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
-.nuxt
-.output
-.output.zip
 dist-ssr
 *.local
 dist.zip

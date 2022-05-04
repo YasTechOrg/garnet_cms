@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-/*document.title = "My Contacts"*/
+document.title = "My Contacts"
 
 </script>
 
